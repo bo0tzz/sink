@@ -17,6 +17,7 @@ defmodule SinkWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/video", VideoController, :index
   end
 
   # Other scopes may use custom stacks.

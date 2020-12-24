@@ -14,9 +14,9 @@ defmodule Sink.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Sink.PubSub},
       # Start the Endpoint (http/https)
-      SinkWeb.Endpoint
+      SinkWeb.Endpoint,
       # Start a worker by calling: Sink.Worker.start_link(arg)
-      # {Sink.Worker, arg}
+      Sink.Backend.Registry
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

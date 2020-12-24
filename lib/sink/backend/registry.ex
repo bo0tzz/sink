@@ -11,8 +11,8 @@ defmodule Sink.Backend.Registry do
     }
   end
 
-  def server_process({name, channel}) do
-    existing_process(name) || new_process({name, channel})
+  def server_process(room_id) do
+    existing_process(room_id) || new_process(room_id)
   end
 
   defp existing_process(name) do
@@ -20,7 +20,7 @@ defmodule Sink.Backend.Registry do
   end
 
   defp new_process(init_arg) do
-    case DynamicSupervisor.start_child(__MODULE__, {Sink.Worker, init_arg}) do
+    case DynamicSupervisor.start_child(__MODULE__, {Sink.Backend.Worker, init_arg}) do
       {:ok, pid} -> pid
       {:error, {:already_started, pid}} -> pid
     end

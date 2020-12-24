@@ -2,7 +2,7 @@ defmodule SinkWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SinkWeb.RoomChannel
+  channel "video:*", SinkWeb.VideoChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
