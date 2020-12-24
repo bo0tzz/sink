@@ -1,0 +1,11 @@
+<div class="phx-hero">
+  <video id="video-player" controls>
+    <source src="https://ia800409.us.archive.org/1/items/BeesPollinatingRaspberries-Clip3/Bees3Wmv.mp4" type="video/mp4">
+  </video>
+</div>
+
+<%# <script defer type="text/javascript">
+document.onload = (event) => {
+  _video.init();
+}
+</script> %>

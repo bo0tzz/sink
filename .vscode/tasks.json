@@ -12,6 +12,11 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "webpack",
+            "type": "shell",
+            "command": "cd assets; ./node_modules/.bin/webpack"
         }
     ]
 }
